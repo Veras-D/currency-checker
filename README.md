@@ -1,7 +1,7 @@
 # Currency Checker
 
 <div align="center"">
-  <img src="./icon.png" style="wight: 240px;" />
+  <img src="./icon.svg" style="wight: 240px;" />
 </div>
 
 A simple Chrome extension that displays real-time exchange rates from USD and EUR to BRL (Brazilian Real).
