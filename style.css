@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #e0e0e0;
+  background-color: #121212;
+  width: 300px;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a1a, #121212);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background: linear-gradient(135deg, #222222, #1a1a1a);
+  color: white;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.card {
+  background: #1e1e1e;
+  margin: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+#rates {
+  padding: 16px;
+}
+
+.rate-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+.rate-item:last-child {
+  border-bottom: none;
+}
+
+.currency {
+  display: flex;
+  align-items: center;
+}
+
+.currency-flag {
+  width: 20px;
+  height: 14px;
+  margin-right: 6px;
+  background-size: cover;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.usa {
+  background: linear-gradient(to bottom, #b22234 0%, #b22234 7.7%, #fff 7.7%, #fff 15.4%, #b22234 15.4%, #b22234 23.1%, #fff 23.1%, #fff 30.8%, #b22234 30.8%, #b22234 38.5%, #fff 38.5%, #fff 46.2%, #b22234 46.2%, #b22234 53.9%, #fff 53.9%, #fff 61.6%, #b22234 61.6%, #b22234 69.3%, #fff 69.3%, #fff 77%, #b22234 77%, #b22234 84.7%, #fff 84.7%, #fff 92.4%, #b22234 92.4%, #b22234 100%);
+  position: relative;
+}
+
+.usa::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 53.9%;
+  background: #3c3b6e;
+}
+
+.euro {
+  background-color: #0052B4;
+  position: relative;
+}
+
+.euro::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, transparent 0%, transparent 40%, #FFDA44 40%, #FFDA44 60%, transparent 60%, transparent 100%);
+}
+
+.currency-code {
+  font-weight: 600;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.arrow {
+  margin: 0 6px;
+  color: #8a8a8a;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #7bef8e;
+  background: #1a271d;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid #2a3a2d;
+  min-width: 80px;
+  text-align: center;
+}
+
+.update-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: #181818;
+  border-top: 1px solid #333;
+}
+
+.small {
+  font-size: 12px;
+  color: #888;
+}
+
+#refresh-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #aaaaaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+#refresh-btn:hover {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+#refresh-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+footer {
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin-top: auto;
+  border-top: 1px solid #333;
+}
+
+.footer-link {
+  color: #999;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rate-item {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.rate-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.loading {
+  opacity: 0.6;
+}
+
+#refresh-btn.spinning svg {
+  animation: spinning 1s linear infinite;
+}
+
+@keyframes spinning {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes glowing {
+  0% { box-shadow: 0 0 5px rgba(123, 239, 142, 0.2); }
+  50% { box-shadow: 0 0 20px rgba(123, 239, 142, 0.4); }
+  100% { box-shadow: 0 0 5px rgba(123, 239, 142, 0.2); }
+}
+
+.value-updated {
+  animation: glowing 1.5s ease-in-out;
+}

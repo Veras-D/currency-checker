@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <img src="icon.png" alt="Currency Checker Logo" class="logo">
+      <h1>Currency Checker</h1>
+    </header>
+    
+    <div class="card">
+      <div id="rates">
+        <div class="rate-item">
+          <div class="currency">
+            <span class="currency-flag usa"></span>
+            <span class="currency-code">USD</span>
+            <span class="arrow">→</span>
+            <span class="currency-code">BRL</span>
+          </div>
+          <div class="value" id="usd">...</div>
+        </div>
+        
+        <div class="rate-item">
+          <div class="currency">
+            <span class="currency-flag euro"></span>
+            <span class="currency-code">EUR</span>
+            <span class="arrow">→</span>
+            <span class="currency-code">BRL</span>
+          </div>
+          <div class="value" id="eur">...</div>
+        </div>
+      </div>
+      
+      <div class="update-info">
+        <div class="small">Atualizado: <span id="update-time">...</span></div>
+        <button id="refresh-btn" title="Atualizar taxas">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 4v6h-6"></path>
+            <path d="M1 20v-6h6"></path>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"></path>
+            <path d="M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <footer>
+      <a href="https://veras-app.netlify.app/" target="_blank" class="footer-link">VERAS &copy; 2025</a>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
