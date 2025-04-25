@@ -86,4 +86,6 @@ This extension:
 
 ---
 
-© 2025 VERAS. All rights reserved.
+<div align="center"">
+  <p>© 2025 VERAS. All rights reserved.<p/>
+</div>
